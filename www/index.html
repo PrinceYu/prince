@@ -43,37 +43,135 @@
 		<h6 class="showme"><a href="#">关于我</a></h6>
 	</div>
 	<!-- 一个层，用来显示透明底色 -->
-	<div id="info">		
+	<div id="info" class="">		
 	</div>
 	<!-- 详细的关于我的内容 -->
-	<div id="detail">
-		<!-- 看过的书 -->
-		<div class="book">
-			<div class="store">
-				<h6>我的书架</h6>
-				<ul>
-					<li><img src="img/b5.jpg" alt=""><div>书名：javascript权威指南（第6版）</div><div>类别：前端/js</div></li>
-					<li><img src="img/b6.jpg" alt=""><div>书名：Node.js开发指南</div><div>类别：前端/js</div></li>
-					<li><img src="img/b8.jpg" alt=""><div>书名：php和mysql web开发（原书第4版）</div><div>类别：web前端/php</div></li>
-					<li><img src="img/b10.jpg" alt=""><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
-				</ul>
+	<div id="det_pos" class="">
+		<!-- 开关 -->
+		<div class="show_detail">x</div>
+		<div id="detail">		
+			<!-- 看过的书 -->
+			<div class="book hid_detail">
+				<div class="store">
+					<h6>我的书架</h6>
+					<ul>
+						<li><img src="img/b5.jpg" alt=""><div>书名：javascript权威指南（第6版）</div><div>类别：前端/js</div></li>
+						<li><img src="img/b6.jpg" alt=""><div>书名：Node.js开发指南</div><div>类别：前端/js</div></li>
+						<li><img src="img/b8.jpg" alt=""><div>书名：php和mysql web开发（第4版）</div><div>类别：web前端/php</div></li>
+						<li><img src="img/b10.jpg" alt=""><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+					</ul>
+				</div>
+				<div class="read">
+					<h6>看完的书</h6>
+					<ul>
+						<li><img src="img/b1.jpg" alt=""><div>书名：css权威指南（第三版）</div><div>类别：前端/css</div><div>阅读次数：大于3次</div><div>读后感</div></li>
+						<li><img src="img/b2.jpg" alt=""><div>书名：精通CSS：高级Web标准解决方案</div><div>类别：前端/css</div><div>阅读次数：1次</div><div>读后感</div></li>
+						<li><img src="img/b3.jpg" alt=""><div>书名：JavaScript DOM编程艺术</div>		<div>类别：前端/js</div><div>阅读次数：大于3次</div><div>读后感</div></li>
+						<li><img src="img/b4.png" alt=""><div>书名：随遇而安/孟非</div><div>类别：名人/传记</div><div>阅读次数：1次</div><div>读后感</div></li>
+						<li><img src="img/b11.jpg" alt=""><div>书名：HTML5和CSS3实例教程</div><div>类别：前端/css</div><div>阅读次数：1次</div><div>读后感</div></li>
+					</ul>
+				</div>
+				<div class="reading">
+					<h6>正在看的书</h6>
+					<ul>
+						<li><img src="img/b7.jpg" alt=""><div>书名：JavaScript高级程序设计（第3版）</div><div>类别：前端/js</div><div>阅读次数：1次</div><div>读后感</div></li>
+						<li><img src="img/b9.jpg" alt=""><div>书名：编写高质量代码：Web前端</div><div>类别：前端/css/js</div><div>阅读次数：1次</div><div>读后感</div></li>
+					</ul>
+				</div>
 			</div>
-			<div class="read">
-				<h6>看完的书</h6>
-				<ul>
-					<li><img src="img/b1.jpg" alt=""><div>书名：css权威指南（第三版）</div><div>类别：前端/css</div><div>阅读次数：大于3次</div><div>读后感</div></li>
-					<li><img src="img/b2.jpg" alt=""><div>书名：精通CSS：高级Web标准解决方案</div><div>类别：前端/css</div><div>阅读次数：1次</div><div>读后感</div></li>
-					<li><img src="img/b3.jpg" alt=""><div>书名：JavaScript DOM编程艺术</div>		<div>类别：前端/js</div><div>阅读次数：大于3次</div><div>读后感</div></li>
-					<li><img src="img/b4.png" alt=""><div>书名：随遇而安/孟非</div><div>类别：名人/传记</div><div>阅读次数：1次</div><div>读后感</div></li>
-					<li><img src="img/b11.jpg" alt=""><div>书名：HTML5和CSS3实例教程</div><div>类别：前端/css</div><div>阅读次数：1次</div><div>读后感</div></li>
-				</ul>
+			<!-- 去过的地方-->
+			<div class="book hid_detail" id="place">
+				<div class="store">
+					<h6>去过的地方</h6>
+					<ul>
+						<li><h2>杭州</h2><div>时间：javascript权威指南（第6版）</div><div>回忆：前端/jsjavascript权威指南（第6版）javascript权威指南（第6版）javascript权威指南（第6版）</div></li>
+						<li><h2>南京</h2><div>书名：Node.js开发指南</div><div>类别：前端/js</div></li>
+						<li><h2>上海</h2><div>书名：php和mysql web开发（第4版）</div><div>类别：web前端/php</div></li>
+						<li><h2>湖州</h2><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+						<li><h2>天津</h2><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+						<li><h2>哈尔滨</h2><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+						<li><h2>山东</h2><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+						<li><h2>北京</h2><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+					</ul>
+				</div>
+				<div class="read">
+					<h6>想去的地方</h6>
+					<ul>
+						<li><h2>壶口</h2><div>时间：javascript权威指南（第6版）</div><div>回忆：前端/jsjavascript权威指南（第6版）javascript权威指南（第6版）javascript权威指南（第6版）</div></li>
+						<li><h2>敦煌</h2><div>书名：Node.js开发指南</div><div>类别：前端/js</div></li>
+						<li><h2>内蒙古</h2><div>书名：php和mysql web开发（第4版）</div><div>类别：web前端/php</div></li>
+					</ul>
+				</div>
 			</div>
-			<div class="reading">
-				<h6>正在看的书</h6>
-				<ul>
-					<li><img src="img/b7.jpg" alt=""><div>书名：JavaScript高级程序设计（第3版）</div><div>类别：前端/js</div><div>阅读次数：1次</div><div>读后感</div></li>
-					<li><img src="img/b9.jpg" alt=""><div>书名：编写高质量代码：Web前端</div><div>类别：前端/css/js</div><div>阅读次数：1次</div><div>读后感</div></li>
-				</ul>
+			<!-- 听过的歌-->
+			<div class="book hid_detail" >
+				<div class="store">
+					<h6>喜欢的歌曲<span class="alert">(在线试听请用高级浏览器：谷歌浏览器或者360浏览器)</span></h6>
+					<ul>
+						<li><audio src="music/zzzs.mp3" controls ></audio><div>歌名：执子之手</div><div>演唱：莫文蔚</div></li>
+						<li><audio src="music/gdhz.mp3" controls></audio><div>歌名：孤独患者</div><div>演唱：陈奕迅</div></li>
+						<li><audio src="music/mytdbt.mp3" controls></audio><div>歌名：每一天都不同</div><div>演唱：郭静</div></li>
+						<li><audio src="music/mgdts.mp3" controls></audio><div>歌名：魔鬼中的天使</div><div>Hebe</div></li>
+						<li><audio src=""></audio><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+						<li><audio src=""></audio><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+						<li><audio src=""></audio><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+						<li><audio src=""></audio><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+					</ul>
+				</div>
+				<div class="store">
+					<h6>喜欢的明星</h6>
+					<ul>
+						<li><h2>五月天</h2><div>时间：javascript权威指南（第6版）</div><div>回忆：前端/jsjavascript权威指南（第6版）javascript权威指南（第6版）javascript权威指南（第6版）</div></li>
+						<li><h2>陈奕迅</h2><div>书名：Node.js开发指南</div><div>类别：前端/js</div></li>
+						<li><h2>王菲</h2><div>书名：php和mysql web开发（第4版）</div><div>类别：web前端/php</div></li>
+						<li><h2>谢霆锋</h2><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+						<li><h2>孙俪</h2><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+						<li><h2>孟非</h2><div>书名：jQuery Mobile快速入门</div><div>类别：前端/js/jquery</div></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 走过的路-->
+			<div class="book hid_detail" >
+				<div class="store">
+					<h6>走过的路</h6>
+					<ul>
+						<li><h1>杭州</h1><h3 title="杭州操刀信息技术有限公司">操刀信息</h3><div>时间：2011.2-2012.10</div><div>类型：互联网/电子商务</div><div>主要做的事：SEO，网运营站，，网店运营，网页设计，制作等</div></li>
+						<li><h1>北京</h1><h3 title="北京今日都市信息技术有限公司">嘀嗒团</h3><div>时间：2012.11-2013-3</div><div>类型：电子商务/团购</div><div>主要做的事：页面构建，写css</div></li>
+						<li><h1>北京</h1><h3 title="北京六间房科技有限公司">六间房</h3><div>时间：2013.3-至今</div><div>类型：娱乐/视频聊天</div><div>主要做的事：页面构建，写css，学js</div></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 常用的网络-->
+			<div class="book net hid_detail" >
+				<h6>常用的网络</h6>
+				<div>
+					<h1>工作学习</h1>
+					<ul>
+						<li>网店运营，网页设计，制作等</li>
+						<li>网店运营，网页设计，制作等</li>
+						<li>网店运营，网页设计，制作等</li>
+					</ul>
+				</div>
+				<div>
+					<h1>娱乐生活</h1>
+					<ul>
+						<li>网店运营，网页设计，制作等</li>
+						<li>网店运营，网页设计，制作等</li>
+						<li>网店运营，网页设计，制作等</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 熟悉的工具-->
+			<div class="book " >
+				<div class="store">
+					<h6>熟悉的工具</h6>
+					<ul>
+						<li><h1>Sublime Text</h1><div>类型：编辑器</div><div>简介：2011.2-2012.10</div><div>优点：互联网/电子商务</div><div>熟练尺度：互联网/电子商务</div></li>
+						<li><h1>Sublime Text</h1><div>类型：编辑器</div><div>简介：2011.2-2012.10</div><div>优点：互联网/电子商务</div><div>熟练尺度：互联网/电子商务</div></li>
+						<li><h1>Sublime Text</h1><div>类型：编辑器</div><div>简介：2011.2-2012.10</div><div>优点：互联网/电子商务</div><div>熟练尺度：互联网/电子商务</div></li>
+						<li><h1>Sublime Text</h1><div>类型：编辑器</div><div>简介：2011.2-2012.10</div><div>优点：互联网/电子商务</div><div>熟练尺度：互联网/电子商务</div></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

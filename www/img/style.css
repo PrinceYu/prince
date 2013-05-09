@@ -56,6 +56,7 @@ ul li{ 	list-style: none;}
 ul li a,h6 a{ text-decoration: none; color:#b6b6b6; }
 ul li a:hover,h6 a:hover{ text-decoration: none; color:#9c9c9c;}
 
+/* by prince yu, 2013.05.09 */
 /* footer */
 #footer{
 	position: absolute;
@@ -66,7 +67,7 @@ ul li a:hover,h6 a:hover{ text-decoration: none; color:#9c9c9c;}
 	font-size: 12px;
 }
 
-/* about*/
+/* 关于我，导航 */
 #about{
 	left: -92px; 
 	top: 180px; 
@@ -103,6 +104,7 @@ ul li a:hover,h6 a:hover{ text-decoration: none; color:#9c9c9c;}
 	border-top-right-radius: 5px; 
 	border-bottom-right-radius: 5px; 
 }
+/* 这是一个层 */
 #info{
 	position: fixed;
 	top: 0;
@@ -113,7 +115,12 @@ ul li a:hover,h6 a:hover{ text-decoration: none; color:#9c9c9c;}
 	opacity: 0.5;
 	z-index: 100;
 }
+/*用于定位开关*/
 #detail{
+	overflow: scroll;
+}
+/* 关于我,详情 */
+#detail,#det_pos{
 	position: fixed;
 	top: 10%;
 	left: 10%;
@@ -122,10 +129,29 @@ ul li a:hover,h6 a:hover{ text-decoration: none; color:#9c9c9c;}
 	background: #fff;
 	border: 1px double #666;
 	border-radius: 5px;
-	z-index: 101;
-	overflow: scroll;
+	z-index: 101;	
 	padding: 20px 30px;
 }
+
+/* 开关 */
+.show_detail{
+	position: absolute;
+	left: -45px;
+	top: 50px;
+	background: #F2DEDE;
+	border: 1px solid #B94A48;
+	font-size: 32px;
+	padding: 5px 15px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	cursor: pointer;
+	color: #ccc;
+}
+.show_detail:hover{
+	color: #999;
+}
+.hid_detail{ display: none; }
+/* 看过的书 */
 .book li{
 	padding: 10px;
 	background: #DFF0D8;
@@ -136,6 +162,7 @@ ul li a:hover,h6 a:hover{ text-decoration: none; color:#9c9c9c;}
 	color: #468847;
 	font-size: 12px;
 }
+#place li{ max-width: 220px; }
 .store,.read,.reading{
 	overflow: hidden;
 }
@@ -143,4 +170,36 @@ ul li a:hover,h6 a:hover{ text-decoration: none; color:#9c9c9c;}
 	font-size: 16px;
 	border-bottom: 2px solid #ccc;
 	margin: 10px 0;
+}
+/* 颜色库 */
+.book li.suc{
+	background: #DFF0D8;
+	color: #468847;
+}
+.book li.warning{
+	color: #c09853;
+	background: #fcf8e3;
+}
+.book li.alert,.alert{
+	color: #b94a48;
+	background-color: #f2dede;
+}
+.book li.alert-info{
+	color: #3a87ad;
+	background-color: #d9edf7;
+}
+
+/* 听过的歌 */
+audio{ width: 250px; height: 30px;}
+h3{ border-bottom: 1px dotted #ccc;	padding-bottom: 2px; display: inline-block;}
+
+/* 熟悉的网络 */
+.net div{
+	overflow: hidden;
+	width: 500px;
+	float: left;
+}
+.net li{
+	float: none;
+	width: 250px;
 }

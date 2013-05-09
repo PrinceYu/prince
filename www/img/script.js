@@ -39,6 +39,30 @@ $(function(){
 			$('#about').mouseleave(function(){
 				$(this).css('left', '-91px');
 			})
+
+			//去过的地方，颜色和北京
+			$("#place li").each(function(i){
+				var a = Math.random();
+				//alert(equRandom(a));
+				var ranClass = equRandom(a);
+				$(this).addClass(ranClass);
+			 });
+			//判断随机数大小的函数
+			
+			function equRandom(placeChoice){				
+				if (placeChoice <= 0.25) {
+					return "suc";
+				}
+				else if(placeChoice <= 0.5) {
+					return "warning";
+				}
+				else if(placeChoice <= 0.75) {
+					return "alert";
+				}
+				else {
+					return "alert-info";
+				}
+			}
 		});
 			setInterval("showAuto()", 5000);
 			//自动轮播
