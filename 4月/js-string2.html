@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js-string2</title>
+</head>
+<body>
+	<script>
+	var str1 = "im dada xxiixix!";
+	var str2 = "im dada too!";
+	var c = str2.localeCompare(str1);//用本地特定的顺序来比较两个字符串。
+	//说明比较结果的数字。如果 stringObject 小于 target，则 localeCompare() 返回小于 0 的数。如果 stringObject 大于 target，则该方法返回大于 0 的数。如果两个字符串相等，或根据本地排序规则没有区别，该方法返回 0。
+	//alert(c)
+	document.write(str2.match("xixa")  + "<br />");
+	document.write(str2.match("dada")  + "<br />");
+	//match() 方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。该方法类似 indexOf() 和 lastIndexOf()，但是它返回指定的值，而不是字符串的位置。
+	var str="Visit Microsoft,Microsoft!"
+	document.write(str.replace(/Microsoft/i, "W3School") + "<br />")
+	document.write(str.replace(/Microsoft/g, "W3School") + "<br />")
+	//replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。
+	document.write(str.search(/Microsoft/));
+	//search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。注释：要执行忽略大小写的检索，请追加标志 i。
+	document.write(str1.slice(3,7) + "<br />");
+	//slice() 方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。
+	document.write(str1.split("") + "<br />");
+	document.write(str1.split(" ") + "<br />");
+	document.write(str1.split("dada") + "<br />");
+	//split() 方法用于把一个字符串分割成字符串数组。注释：如果把空字符串 ("") 用作 separator，那么 stringObject 中的每个字符之间都会被分割。注释：String.split() 执行的操作与 Array.join 执行的操作是相反的。
+	document.write(str1.strike().sup() +"dada");
+	var arr = new Array(3)
+	arr[0] = "George"
+	arr[1] = "John"
+	arr[2] = "Thomas"
+	document.write(arr[0] + arr[1] + arr[2])
+	var cc = arr.join();
+	document.write(cc)
+	</script>
+</body>
+</html>

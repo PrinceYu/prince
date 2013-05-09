@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css-ie6-margin-float</title>
+	<style>
+	ul{
+		border: 1px solid #ccc;
+		overflow: hidden;
+		*zoom: 1;
+		padding: 0 20px;
+	}
+	li{
+		float:left;
+		width: 200px;
+		list-style: none;
+		background: red;
+		margin-right: 20px;
+		2margin-left: 20px;
+	}
+	#container{
+		margin: 2em auto .5em;
+		background-color: #cccccc;
+		padding: 2em 0;
+		border: 2px solid #333333;
+		width: 80%;
+	}
+	#inner{
+		background-color: red;
+		border: 2px solid #cccccc;
+		margin: -4em 2em 0;
+		position:relative;
+		zoom: 1;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<div id="container">
+		<div id="inner">
+			I am cut off<br />
+			Text<br />
+			More text<br />
+		</div>
+	</div>
+</body>
+</html>

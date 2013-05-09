@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML</title>
+</head>
+<body>
+	<div id="testdiv">ewrewr<p>this is<em>my</em>contest.</p></div>
+	<p><input type="button" alt="这是个演示按钮" title="演示按钮提示标题" name="btnShowAttr" id="btnShowAttr" value="按钮节点演示" /></p>
+	<script>
+	window.onload = function(){
+		var testdiv = document.getElementById('testdiv');
+		testdiv.innerHTML ="<p>hehe</p>" 
+		alert(testdiv.innerHTML)
+		var testdivID = testdiv.attributes;
+		alert(testdivID[0].nodeType);//属性节点nodeType:2
+		alert(testdiv.childNodes.length);//子元素长度2
+		alert(testdiv.firstChild.nodeType);//第一个元素是文本3
+		alert(testdiv.childNodes[0].nodeType);//第一个元素是文本3
+		alert(testdiv.childNodes[1].nodeType);//第二个是元素节点2
+		alert(testdiv.firstChild[2].nodeType);//根据现在最新的DOM规范，Attribute不是Node的子类型。但是她还是节点
+	}
+	</script>
+</body>
+</html>

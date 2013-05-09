@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dingwei</title>
+	<style>
+	body{font: 14px/18px "微软雅黑"}
+	a{ font-size: 14px;}
+	</style>
+</head>
+<body>
+
+<a href="http://v.6.cn/45882544" target="_blank">sno32大狐大概感到孤独感(45882544)</a>
+<script>
+//"use strict";
+var dada = {
+	name : "yujianqi",
+	age : 27,
+	city : "beijing"
+};
+Object.defineProperty(dada,"name",{
+	configurable : false,//能不能通过delete伤处属性从而从新定义属性
+	//writable :false,//能不能修改属性值
+	enumerable : true,//能不能通过for-in来喜欢返回属性
+	//value : "dada" //包含这个属性的属性值
+});
+dada.name = "prince";
+delete dada.name
+for(var a in dada){
+	alert(a)
+}
+alert(dada.name);
+</script>
+</body>
+</html>
+

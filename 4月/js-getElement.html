@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js-getElement</title>
+	<script type="text/javascript">
+	window.onload = function(){
+		var opage = document.getElementById('page');
+		//var oright = document.getElementsByClassName('dada right');
+		var odiv = document.getElementsByTagName('div');
+		var omain = document.getElementsByName('main');
+		//alert(typeof(opage));//object
+		//alert(odiv.length);//8
+		//alert(oright.length);//2
+		//alert(omain.length);//3
+		for (var i = 0; i < odiv.length; i++) {
+			//alert(typeof(odiv[i]));
+		};
+
+		//自己新建getElementsByClassName函数
+		function getElementsByClassName(node, className){
+			if (node.getElementsByClassName) {
+				//使用已经存在的方法
+				return node.getElementsByClassName(className);
+			} 
+			else{
+				var results = new Array();
+				var elems = node.getElementsByTagName("*");
+				for (var i = 0; i < elems.length; i++) {
+					//if(elems[i].className.indexOf(classname) != -1){
+					if(elems[i].className == className ){
+						results[results.length] = elems[i];
+					}
+				};
+				return results;
+			};
+		}
+		//引用getElementsByClassName
+		var oright = getElementsByClassName( odiv[0],"right");
+		for (var i = 0; i < oright.length; i++) {
+			var orightTxt = oright[i].getAttribute("class");
+			if(orightTxt)
+			alert(oright[i].getAttribute("class"));
+			oright[i].setAttribute("title","dada"+i);
+			alert(oright[i].getAttribute("title"));
+		};
+	}
+	</script>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<a href="" class="right logo"></a>
+			<div class="right dada xixi">关注微博</div>
+		</div>
+		<div id="main">
+			<div class="left" name="main">main内容</div>
+			<div class="right dada" name="main">侧边栏</div>
+		</div>
+		<div id="footer">
+			<p><span name="main" class="dada right">经营性网站备案信息</span> <span>京ICP证060797号</span></p>
+		</div>
+	</div>
+	<div>test</div>
+</body>
+</html>

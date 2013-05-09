@@ -1,0 +1,43 @@
+.con{
+	margin: 10px auto;/*for ie 6-8 border-radius*/
+	position: relative;/*for ie 6-8 border-radius*/
+	width: 270px;
+	height: 270px;
+	}
+.prince{
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;/*for ie 6-8 border-radius*/
+	border-radius: 100%;
+	border: 10px solid #fff;
+	background: url("1.png");
+	opacity: 0.6;
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+/* 利用VML矢量可标记语言作为画笔绘出圆角*/
+/*	position:relative; 
+	z-index:2; 
+	behavior: url(img/ie-css3.htc);*/
+	}
+/*for ie 6-8 border-radius*/
+.img-bg{ 
+	background: url("img-bg.gif") no-repeat;
+	position: absolute; 
+	top: 0 ;
+	bottom: 0;
+	width: 270px;
+	height: 270px;
+}
+.nav{ 
+	margin: 30px auto 10px; 
+	text-align: center;
+}
+.nav ul{ margin: 0 auto; }
+.nav ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 8px;
+	_zoom:1;
+	*display:inline;
+}
+.nav ul li a{ text-decoration: none; color:#b6b6b6;}
+.nav ul li a:hover{ text-decoration: none; color:#9c9c9c;}

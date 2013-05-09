@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML</title>
+</head>
+<body>
+	<div id="testdiv"></div>
+	<script>
+	window.onload = function(){
+		//alert()
+		var para = document.createElement('p');
+		//内容一
+		var txt1 = document.createTextNode("this is");
+		para.appendChild(txt1);	
+		//内容二
+		var emp = document.createElement('em');
+		var txt2 = document.createTextNode("my");
+		emp.appendChild(txt2);
+		para.appendChild(emp);
+		//内容三
+		var txt3 = document.createTextNode("content.");
+		para.appendChild(txt3);
+		var testdiv = document.getElementById('testdiv');
+		testdiv.appendChild(para);
+	}
+	</script>
+</body>
+</html>

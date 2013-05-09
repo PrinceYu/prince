@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js-4.172</title>
+	<script language="JavaScript">
+// moveList用于对两个多选列表进行选项的移动操作
+// from为"需要移动"的列表名称，to为"移动到"列表名称
+function moveList(from,to) {  
+  var fromList = document.myForm.elements[from];
+  var fromLen = fromList.options.length;
+  //alert(fromList.name)
+  //alert(fromLen);
+  var toList = document.myForm.elements[to];
+  var toLen = toList.options.length;
+   //alert(toLen);
+  // current 为"需要移动"列表中的当前选项序号
+  var current = fromList.selectedIndex;
+  // 如果"需要移动"列表中有选择项，则进行移动操作
+  while (current>-1) {
+    // o为"需要移动"列表中当前选择项对象
+    var o = fromList.options[current];
+    var t = o.text;
+    var v = o.value;
+    // 根据已选项新建一个列表选项
+    var optionName = new Option(t, v, false, false);
+    // 将该选项添加到"移动到"列表中
+    toList.options[toLen]= optionName;
+    toLen++;
+    // 将该选项从"需要移动"列表中清除
+    fromList.options[current]=null;
+    current = fromList.selectedIndex;
+  }
+}
+</script>
+
+</head>
+<body>
+	<form name="myForm">
+	  <table>
+	    <tr valign="top">
+	      <td>
+	        <select name="leftList" multiple size="6" style="width:50px;"> 
+	          <option>a</option>
+	          <option>b</option>
+	          <option>c</option>
+	        </select>
+	      </td>
+	      <td>
+	        <!-- 通过事件onclick调用JavaScript的moveList函数 -->
+	        <p><input type="button" name="from" id="from" value=" >> "  onclick="moveList('leftList','rightList')"></p>
+	        <p><input type="button" name="to" id="to" value=" << " onclick="moveList('rightList','leftList')"></p>
+	      </td>
+	      <td>
+	        <select name="rightList" multiple size="6" style="width: 50px;">
+	          <option>d</option>
+	          <option>e</option>
+	          <option>f</option>
+	        </select>
+	      </td>
+	    </tr>
+	  </table>
+	</form>
+</body>
+</html>

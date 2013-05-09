@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML</title>
+	<style>
+	</style>
+</head>
+<body>
+	<p id="exam" >A exam of Dada</p>
+	<p id="exam2" >A exam of Dada</p>
+	<script>
+	window.onload = function(){		
+		posMessage();
+	}
+	function posMessage(){
+			//1
+			var para = document.getElementById('exam');
+			para.style.position = "absolute"
+			para.style.top = "100px"
+			para.style.left = "100px"
+			moveMessage("exam",300,300,10);
+			//2
+			var para2 = document.getElementById('exam2');
+			para2.style.position = "absolute"
+			para2.style.top = "300px"
+			para2.style.left = "100px"
+			moveMessage("exam2",300,100,10);
+		}
+
+	function moveMessage (elementID,final_x,final_y,interval) {
+			var para = document.getElementById(elementID);
+			var xpos = parseInt(para.style.left);
+			var ypos = parseInt(para.style.top);
+			//alert(xpos)
+			if (xpos == final_x && ypos == final_y) { return true};
+			if (xpos < final_x) { xpos++};
+			if (xpos > final_x) { xpos--};
+			if (ypos < final_y) { ypos++};
+			if (ypos > final_y) { ypos--};
+			para.style.backgroundColor = "black"
+			para.style.color = "#fff"
+			para.style.top = ypos + "px"
+			para.style.left = xpos + "px"
+			var repeat = "moveMessage('"+elementID+"',"+final_x+","+final_y+","+interval+")";
+			movement = setTimeout(repeat,interval);
+		}
+	</script>
+</body>
+</html>

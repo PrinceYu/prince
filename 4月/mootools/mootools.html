@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mootools-test</title>
+	<style>
+	.dada{ background: #ccc; }
+	.cut_line{ border-bottom: 1px solid #ccc;}
+	</style>
+</head>
+<body>
+	<div id="body_wrap">
+		<a href="#">anchor</a>
+        <a href="#">another anchor</a>
+        <a id="special_anchor" href="#">special anchor</a>
+        <a class="special_anchor_class" href="#">special anchor</a>
+        <a class="special_anchor_class" href="#">another special anchor</a>        
+   	</div>
+   	<span id="id_name" class="dada">dada</span>
+    <div class="cut_line">ddaada</div>
+    <p></p>
+    
+	<script src="mootools-core-1.4.5-full-nocompat.js" type="text/javascript"></script>
+	<script src="mootools-more-1.4.0.1.js" type="text/javascript"></script>
+	<script>
+		window.addEvent('domready',function(){
+			//dadaFunction();
+			$('body_wrap').addClass("dada");
+			//通过元素选单个元素
+			var link = $('body_wrap').getElement("a");
+			link.style.color = "red";
+			//通过ID选单个元素
+			var link2 = $('body_wrap').getElement("#special_anchor");
+			link2.style.color = "green";
+			//通过class选单个元素
+			var link3 = $('body_wrap').getElement(".special_anchor_class");
+			link3.style.color = "pink";
+			//快速选择多个元素
+			var links = $$('a');
+			var links1. = $$('span','div');//为什么没取出来？
+			//alert("A标签的个数" + links.length);
+			links1.style.backgroundColor = "red";
+			//选择多个元素
+			var links2 = $('body_wrap').getElements("a");
+			//alert(links2.length)
+		});
+/*		var dadaFunction = function(){
+			alert("im a good man!");
+		};*/
+	</script>
+</body>
+</html>

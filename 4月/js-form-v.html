@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html-表单验证</title>
+</head>
+<body>
+	<form action=""  name="myform" onSubmit="return validate();">
+		<label for="">姓名：</label><input type="text"  name="myname" /><br />
+		<label for="">卡号：</label><input type="text" name="mynumber" value="0000-0000-0000-0000" /><br />
+		<input type="submit" value="提交">
+	</form>
+	<script>
+	function validate()
+	{
+	    if(!checkName(document.myform.myname.value)) return false;
+	    if(!checkNum(document.myform.mynumber.value)) return false;
+	    alert(" 数据完全");
+	    return true;
+	}
+	function checkName(s)
+	{
+	    var ok = (s.length>0);
+	    if(!ok) alert(" 请输入名字！")
+	    return ok;
+	}
+	function checkNum(n)
+	{
+	    var ok,i,ch;
+	    ok = (n.charAt(4)=="-" && n.charAt(9)=="-" && n.charAt(14)=="-");//charAt方法可返回指定位置的字符。
+	    if(!ok)
+	    {
+	        alert("<"+n+"> 卡号输入有误，请查核！");
+	        return false;
+	    }
+	    i=0;
+	    while(i<19)
+	    {
+	        ch = n.charAt(i);
+	        //if (ch > "9" || ch < "0"){
+	        if (ch!="-" && (ch > "9" || ch < "0")){
+	            alert("<"+n+"> 卡号输入有误，查核！")
+	            return false;
+	        }
+	        i++;
+	    }
+	       return true;
+	}
+	</script>
+</body>
+</html>

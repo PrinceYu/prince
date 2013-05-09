@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML</title>
+	<style>
+	#slideshow{ 
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+		position: relative;
+	}
+	</style>
+</head>
+<body>
+	<h1>Web Design</h1>
+	<p>there are the things you should know</p>
+	<ol id="linklist">
+		<li><a href="structure.html">structure</a></li>
+		<li><a href="presentation.html">presentation</a></li>
+		<li><a href="behavior.html">behavior</a></li>
+	</ol>
+	<div id="slideshow">
+		<img src="5.jpg" alt="pic" id="preview">
+	</div>
+	<script>
+	window.onload = function(){		
+		prepareSlideshow();
+	}
+	function prepareSlideshow(){
+		//获取图片并设置样式
+		var preview = document.getElementById('preview');
+		preview.style.position = "relative";
+		preview.style.top = "0px";
+		preview.style.left = "0px";
+		//获取链接
+		var list = document.getElementById('linklist');
+		var links = list.getElementsByTagName('a');
+		//遍历a，加动画效果。为什么不行
+		/*for (var i = 0; i < links.length; i++) {
+			links[i].onmouseover = function(){
+				var xpos = -100*(i+1);
+				moveMessage("preview",xpos,0,10);
+			}
+		};*/
+		links[0].onmouseover = function(){
+			moveMessage("preview",-100,0,10);
+		}
+		links[1].onmouseover = function(){
+			moveMessage("preview",-200,0,10);
+		}
+		links[2].onmouseover = function(){
+			moveMessage("preview",-300,0,10);
+		}
+	}
+	function posMessage(){
+		//1
+		var para = document.getElementById('exam');
+		para.style.position = "absolute"
+		para.style.top = "100px"
+		para.style.left = "100px"
+		moveMessage("exam",300,300,10);
+		//2
+		var para2 = document.getElementById('exam2');
+		para2.style.position = "absolute"
+		para2.style.top = "300px"
+		para2.style.left = "100px"
+		moveMessage("exam2",300,100 ,10);
+	}
+
+	function moveMessage (elementID,final_x,final_y,interval) {
+		var para = document.getElementById(elementID);
+		if (para.movement) {
+			clearTimeout(para.movement);
+		};
+		var xpos = parseInt(para.style.left);
+		var ypos = parseInt(para.style.top);
+		//alert(xpos)
+		if (xpos == final_x && ypos == final_y) { return true};
+		if (xpos < final_x) { xpos++};
+		if (xpos > final_x) { xpos--};
+		if (ypos < final_y) { ypos++};
+		if (ypos > final_y) { ypos--};
+		para.style.top = ypos + "px"
+		para.style.left = xpos + "px"
+		var repeat = "moveMessage('"+elementID+"',"+final_x+","+final_y+","+interval+")";
+		para.movement = setTimeout(repeat,interval);
+	}		
+	</script>
+</body>
+</html>

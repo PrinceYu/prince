@@ -1,0 +1,15 @@
+/**/
+body{ font-size: 14px; margin: 0; padding: 0;}
+.s-form{ margin: 0 auto; width: 990px; }
+.s-bg{ background: #eee; border: 1px solid #999; margin-bottom: 5px;}
+.s-header{ font-size: 22px; padding: 20px 5px; }
+.s-notice{ font-size: 12px; padding: 10px 5px; }
+.s-tb{ width: 100%; }
+.s-tb{ border-collapse: collapse; }
+.s-tb td,.s-tb th{ border: 1px solid #ccc; padding: 5px; }
+.s-tb td{ text-align: center;}
+.s-search{ padding: 10px;}
+.s-search label{ width: 80px; display: inline-block; text-align: right;}
+.s-search .s-text{ padding: 5px; border: 1px solid #ccc; }
+.s-search .s-submit{ border: 1px solid #2c5abe; padding: 6px 12px; background: #4a8eff; color: #fff; cursor: pointer; }
+.s-r{ margin-bottom: 5px;}

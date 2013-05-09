@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dingwei</title>
+	<style>
+	body{font: 14px/18px "微软雅黑"}
+	a{ font-size: 14px;}
+	</style>
+</head>
+<body>
+
+<a href="http://v.6.cn/45882544" target="_blank">sno32大狐大概感到孤独感(45882544)</a>
+<script>
+    //一
+	var person = new Object();
+	person.name = "dada";
+	person.age = 27;
+	person.city = "beijing";
+	//二
+	var person2 = {
+		name :"dada",
+		age :23,
+		city :"shanghai"
+	}
+	//三
+	var person3 = {};
+	person3.name = "dada";
+	person3.age = 24;
+	person3.city = "beijing";
+	// 
+	showInfo({
+		name : "jianqi",
+		age : 25
+	});
+	function showInfo(dada){
+		//alert(dada["age"])
+	}
+	var colors = new Array();
+	var colors = new Array(3);
+	var colors = new Array("red","yellow","blue");
+	var colors = Array(5);
+	var colors = ["pink","red","yellow","blue","green"]
+	//colors.length = 3;
+
+	alert(typeof colors.toString())
+	alert(typeof colors.valueOf())
+	alert(colors.join("@"))
+	//alert(colors[2])
+	//Array,Object,RegExp
+/*	if (colors instanceof Array) {
+		alert("colors IS ok")
+	};
+	if (person3 instanceof Object) {
+		alert("person3 IS ok")
+	};
+	if (Array.isArray(colors)) {
+		alert("ok")
+	};*/
+</script>
+</body>
+</html>
+

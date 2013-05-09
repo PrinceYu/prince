@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js-event</title>
+</head>
+<body>
+	<form action="">
+		<input id= "input" type="text" onmouseover = " mouseover(event)" value="a">
+	</form>
+	<script>
+	function mouseover(event){
+		// body...
+		var input = document.getElementById('input');
+		  //var e = window.event||event;
+           x=event.clientX;
+           y=event.clientY;
+            //x=window.event.clientX;
+            //y=window.event.clientY;
+           // x=e.clientX;
+           // y=e.clientY;
+  		input.value = x + "," + y;
+  		//alert(x + "," + y);
+  		//alert(y);
+  		window.alert(input.value)
+	}
+	</script>
+</body>
+</html>

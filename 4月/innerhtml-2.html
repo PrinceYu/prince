@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML</title>
+</head>
+<body>
+	<h1>什么是 AJAX ？</h1>
+<p><abbr title="Asynchronous JavaScript and XML">AJAX</abbr> = 异步 JavaScript 和 <abbr title="ExtensibleMarkupLanguage">XML</abbr>。</p>
+<blockquote cite="http://www.w3school.com.cn/ajax/index.asp"><p>AJAX 是一种用于创建快速动态网页的技术。</p></blockquote>
+<p>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
+传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。</p>
+<p>有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。</p>
+	<script>
+	window.onload = displayAbbr;
+	function displayAbbr () {
+		//检查兼容性
+		if(!document.getElementsByTagName || !document.createElement || !document.createTextNode) return false;
+		//获取缩略词
+		var abbr = document.getElementsByTagName('abbr');
+		var defs = new Array();
+		if (abbr.length < 1) return false;
+		//遍历
+		for (var i = 0; i < abbr.length; i++) {
+			var def = abbr[i].getAttribute("title");
+			var key = abbr[i].lastChild.nodeValue;
+			defs[key] = def;
+		};
+		//创建标记
+		var dlist = document.createElement('dl');
+		for(key in defs){
+			var def = defs[key];
+			var dtitle = document.createElement('dt');
+			var dtitle_txt = document.createTextNode(key);
+			dtitle.appendChild(dtitle_txt);
+			var ddesc = document.createElement('dd');
+			var ddesc_txt = document.createTextNode(def);
+			ddesc.appendChild(ddesc_txt);
+			dlist.appendChild(dtitle);
+			dlist.appendChild(ddesc);
+		}
+		var header = document.createElement('h2');
+		var header_txt = document.createTextNode('Abbreviations');
+		header.appendChild(header_txt);
+		document.body.appendChild(header);
+		document.body.appendChild(dlist);
+	}
+	</script>
+</body>
+</html>

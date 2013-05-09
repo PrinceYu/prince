@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript">
+///document.onmousemove =  
+function show_coords(event){
+	var input = document.getElementById('input');
+	 var e = window.event||event;
+	 var x = e.clientX;
+	 var y = e.clientY;
+	 //input.value = x + "," + y;
+	 var say = document.getElementById('coords');
+	 say.innerHTML = "X:"+x+" Y:"+y;
+	 say.style.position = "absolute";
+	 say.style.left = x + 30;
+	 say.style.top = y;
+	 say.style.display = "inline-block";
+}
+
+</script>
+<style>
+	2body{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	span{
+		padding: 0 5px;
+		background: red;
+		font-size: 12px;
+		line-height: 18px; 
+		border-radius: 3px;
+		display: none;
+	}
+</style>
+</head>
+<body onmousemove="show_coords(event)">
+<span id="coords"></span>
+</body>
+<html>

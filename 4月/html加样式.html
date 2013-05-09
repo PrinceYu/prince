@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html加样式</title>
+	<style>
+		body{ font-size: 14px; margin: 0; padding: 0;}
+		.s-form{ margin: 0 auto; width: 990px; }
+		.s-bg{ background: #eee; border: 1px solid #999; margin-bottom: 5px;}
+		.s-header{ font-size: 22px; padding: 20px 5px; }
+		.s-notice{ font-size: 12px; padding: 10px 5px; }
+		.s-tb{ width: 100%; }
+		.s-tb{ border-collapse: collapse; }
+		.s-tb td,.s-tb th{ border: 1px solid #ccc; padding: 5px; }
+		.s-tb td{ text-align: center;}
+		.s-search{ padding: 10px;}
+		.s-search label{ width: 70px; display: inline-block; }
+		.s-search .s-text{ padding: 5px; border: 1px solid #ccc; }
+		.s-search .s-submit{ border: 1px solid #2c5abe; padding: 6px 12px; background: #4a8eff; color: #fff; cursor: pointer; }
+		.s-r{ margin-bottom: 5px;}
+	</style>
+</head>
+<body>
+	<div class="s-form">
+		<form method="post" name="forms" onsubmit="if(document.getElementById('uid').value.length>0){return true;}else{alert('关键字不能为空！');return false;}">
+		<h3 class="s-header s-bg">查询主播页面鼠标长时间未移动情况</h3>
+		<div class="s-search s-bg">
+			<div class="s-r">
+				<label for="">类型</label><input class="s-text" type="text" name='type' value="" />
+				<label for="">用户编号</label><input class="s-text" type="text" name='uid' value="" />
+			</div>
+			<div class="s-r">
+				<label for="">时间范围</label><input class="s-text" type="text" name="stm" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="<{$stDate}>" />
+                    <span>到</span><input class="s-text" type="text" name="etm" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="<{$endDate}>" />
+			</div>
+			<div class="s-r">
+				 <input class="s-submit" type="submit" value="查 询" />
+			</div>
+		</div>		
+	  	<div class="s-notice s-bg">
+	  		<h3>注意事项：</h3>
+	      	<p>1、请输入用户id，查看用户的昵称和昵称的查封状态</p>
+	      	<p>2、修改的昵称请注意以下几点    a、输入的昵称长度允许3-10个字  b、请勿输入已经被使用的昵称</p>
+	  	</div>
+	   <div class="s-bg">
+	   	  <table class="s-tb">
+	   	 	 	<tr>
+	   	  			<th>序号</th>
+	   	  			<th>用户编号</th>
+	   	  		    <th>直播编号</th>
+	   	  			<th>页面鼠标未移动时长</th>
+	   	  			<th>记录时间</th>
+	   	  		</tr>
+				<tr>
+	   	  			<td>序号</td>
+	   	  			<td>用户编号</td>
+	   	  	  		<td>直播编号</td>
+	   	  			<td>页面鼠标未移动时长</td>
+	   	  			<td>记录时间</td>
+				</tr>
+				<tr>
+	   	  			<td>序号</td>
+	   	  			<td>用户编号</td>
+	   	  	  		<td>直播编号</td>
+	   	  			<td>页面鼠标未移动时长</td>
+	   	  			<td>记录时间</td>
+				</tr>
+				<tr>
+	   	  			<td>序号</td>
+	   	  			<td>用户编号</td>
+	   	  	  		<td>直播编号</td>
+	   	  			<td>页面鼠标未移动时长</td>
+	   	  			<td>记录时间</td>
+				</tr>
+			</table>
+	   </div>	   
+	   </form>
+	   </div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css-open-close</title>
+	<style>	
+	</style>
+	<script>
+	function opennewwin(){
+		open("http://baidu.com","replace");
+	}
+	</script>
+</head>
+<body>
+<p><a href="javascript:opennewwin()">打开新窗口</a></p>
+<p><a href="javascript:open()">打开本窗口</a></p>
+<p><a href="javascript:closenewwin()">关闭新窗口</a></p>
+<p><a href="javascript:close()">关闭本窗口</a></p>
+<p><a href="javascript:opennewwin()">打开新窗口</a></p>
+<p><a href="javascript:open()">打开本窗口</a></p>
+<p><a href="javascript:closenewwin()">关闭新窗口</a></p>
+<p><a href="" onclick="opennewwin()">关闭本窗口</a></p>
+</body>
+</html>

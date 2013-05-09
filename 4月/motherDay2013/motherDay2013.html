@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>motherDay2013</title>
+	<style type="text/css">
+	body{ margin: 0; padding: 0;}
+	.yd_bd{background: url(http://vr6.6.cn/imges/live/events/motherDay2013/mother_bg.png);}
+	.yd_h{ margin: 0 auto; width: 950px; }
+	.yd_h .yd_h1{ height: 250px; background: url(http://vr6.6.cn/imges/live/events/motherDay2013/mother_h_1.jpg) no-repeat; }
+	.yd_h .yd_h2{ height: 230px; background: url(http://vr6.6.cn/imges/live/events/motherDay2013/mother_h_2.jpg) no-repeat;}
+	.yd .yd_cont1{ margin: 0 auto; width: 950px; height: 425px; background: url(http://vr6.6.cn/imges/live/events/motherDay2013/mother_bg_1.jpg) no-repeat; position: relative; }
+	.yd .yd_cont2{ margin: 0 auto; width: 950px; height: 345px; background: url(http://vr6.6.cn/imges/live/events/motherDay2013/mother_bg_2.jpg) no-repeat; position: relative; }
+	.yd .yd_cont1 .tb1{ position: absolute; top: 60px; left: 97px; }
+	.yd .yd_cont1 .tb2{ position: absolute; top: 60px; left: 572px; }
+	.yd td{ line-height: 30px; height: 30px;}
+	.yd th{ line-height: 40px; height: 40px;}
+	.tb1 th{ font: bold 16px '微软雅黑'; color: #5eac96;}
+	.tb2 th{ font: bold 16px '微软雅黑'; color: #d15a40;}
+	.yd_cont2 th{ color: #fff; }
+	.yd td{ font: 14px '微软雅黑'; color: #0b3744; text-align: center;}
+	.yd a{ color: #0b3744;}
+	.yd a:hover{ color: #0b3744; text-decoration: underline; cursor: pointer;}
+	.yd span:hover{text-decoration: underline;}
+	.yd .tb_f span{ color: #d15a40;}
+	.yd .tb_f td{ color: #d15a40;}
+	.yd .tb_f a{ color: #d15a40;}
+	.yd span{ white-space: nowrap; text-overflow :ellipsis; display: inline-block; overflow: hidden; width: 150px;}
+
+	/* 重构公共样式 */
+	#pf{ margin-top: 0; }
+	#pf .idxFoot{ background: #f5eabb;}
+	</style>
+</head>
+<body>
+<div class="yd_bd">
+	<div class="yd_h">
+		<div class="yd_h1"></div>
+		<div class="yd_h2"></div>
+	</div>
+	<div class="yd">
+		<div class="yd_cont1">
+			<div class="tb1" id="tb1">
+				<table>
+					<colgroup>
+						<col width="45">
+						<col width="180">
+						<col width="80">
+					</colgroup>
+					<tr>
+						<th>名次</th>
+						<th>主播</th>
+						<th>五四奖章</th>
+					</tr>
+					<{assign var="rank" value=1}>
+					<{foreach from=$propSort.332.receive item=k}>
+					<{if $rank < 9}>
+					<tr <{if $rank == 1}>class="tb_f" id="yd_r"<{/if}>>
+						<td><{$rank}></td>
+						<td><a href="/<{$k.rid}>" target="_blank"><span><{$k.alias}>(<{$k.rid}>)</span></a></td>
+						<td><{$k.num}></td>
+					</tr>					
+					<{assign var="rank" value=$rank+1}>
+					<{/if}>
+					<{/foreach}>
+				</table>
+			</div>
+			<div class="tb2" id="tb2">
+				<table>
+					<colgroup>
+						<col width="45">
+						<col width="180">
+						<col width="80">
+					</colgroup>
+					<tr>
+						<th>名次</th>
+						<th>富豪</th>
+						<th>五四奖章</th>
+					</tr>
+					<{assign var="rank" value=1}>
+					<{foreach from=$propSort.332.send item=k}>
+					<{if $rank < 9}>
+					<tr <{if $rank == 1}>class="tb_f" id="yd_s"<{/if}>>
+						<td><{$rank}></td>
+						<td><a href="/<{$k.rid}>" target="_blank"><span><{$k.alias}>(<{$k.rid}>)</span></a></td>
+						<td><{$k.num}></td>
+					</tr>					
+					<{assign var="rank" value=$rank+1}>
+					<{/if}>
+					<{/foreach}>					
+				</table>
+			</div>
+		</div>
+		<div class="yd_cont2">
+			<div class="tb1" id="tb1">
+				<table>
+					<colgroup>
+						<col width="45">
+						<col width="180">
+						<col width="80">
+					</colgroup>
+					<tr>
+						<th>名次</th>
+						<th>主播</th>
+						<th>五四奖章</th>
+					</tr>
+					<{assign var="rank" value=1}>
+					<{foreach from=$propSort.332.receive item=k}>
+					<{if $rank < 9}>
+					<tr <{if $rank == 1}>class="tb_f" id="yd_r"<{/if}>>
+						<td><{$rank}></td>
+						<td><a href="/<{$k.rid}>" target="_blank"><span><{$k.alias}>(<{$k.rid}>)</span></a></td>
+						<td><{$k.num}></td>
+					</tr>					
+					<{assign var="rank" value=$rank+1}>
+					<{/if}>
+					<{/foreach}>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!--[if IE 6]>
+<script type="text/javascript" src="/js/DD_belatedPNG-min.js"></script>
+<script>
+DD_belatedPNG.fix(".newyear_ct em,#foot_logo");
+</script>
+<![endif]-->
+<script>
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+menu.className=i==cursel?"on":"";
+con.style.display=i==cursel?"block":"none";
+}
+}
+
+$LAB.script(JSF.login).wait().script(JSF.mt).wait().script(JSF.z).wait(function(){
+	AddReady(function() {
+
+
+        // click事件
+        $$('.link-box').addEvent('click', function(_e){
+			_e.stop();
+        	getRequest('getAward.php');
+        });
+        // AJAX
+        function getRequest(t){
+            //判断登录
+            if(_puser.uid){ //会员
+                new Request.JSON({
+                    url:'getAward.php',
+                    onComplete:function(obj){ //成功返回
+                        if(obj.flag == '001'){
+                            Prompt.create({
+                                content:'<div><img src="http://vr1.6.cn/imges/live/events/greenorange/ok.png" width=36 height=36 /><span>'+obj.content+'</span></div>'
+                            });         
+                        }else{
+                            Prompt.create({
+                                content:obj.content
+                            }); 
+                        }
+                    }
+                }).get({act:t});
+           }else{//游客
+               Login.toLogin();
+           };
+        }
+        // AJAX
+		function getRequestphb(link){
+                new Request.JSON({
+                    url:link,
+                    onComplete:function(obj){ //成功返回
+                        Prompt.create({
+                            content:'<div><img src="http://vr1.6.cn/imges/live/events/greenorange/ok.png" width=36 height=36 /><span>'+obj.content+'</span></div>'
+                        });
+                    }
+                }).get();
+            }	
+
+
+	});
+});
+</script>
+<script>
+	window.onload = function(){
+		//居中
+		/*var tRow = document.getElementsByTagName('tr');
+		var tData = document.getElementsByTagName('td');
+		for (var i = 0; i < tData.length; i+=3) {
+			tData[i+1].style.paddingLeft = "20px";
+			tData[i+1].style.textAlign = "left";
+		};*/
+		//第一名
+		var tRowr = document.getElementById('yd_r');
+		var tDatar = tRowr.getElementsByTagName('td');
+		tDatar[0].style.fontWeight = "bold";
+		tDatar[0].style.color = "#5f000a";
+		var tRows = document.getElementById('yd_s');
+		var tDatas = tRows.getElementsByTagName('td');
+		tDatas[0].style.fontWeight = "bold";
+		tDatas[0].style.color = "#5f000a";
+		//二到五名
+		function changeColColor(tablen){
+			var tableR = document.getElementById(tablen);
+			var tRowrs = tableR.getElementsByTagName('tr');//取收到奖章中的tr
+			var rowLength;
+			if(tRowrs.length < 6){
+				rowLength = tRowrs.length;
+			}else{
+				rowLength = 6;
+			}
+			for (var i = 2; i < rowLength; i++) {
+				var tDatars =  tRowrs[i].getElementsByTagName('td')[0];
+				tDatars.style.color = "#d15a40";
+			};
+		}
+		changeColColor("tb1");
+		changeColColor("tb2");
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mootools-test</title>
+	<style>
+	body{ margin: 0; padding: 0;}
+	</style> 
+</head>
+<body>
+	<p style="border:1px solid red; width:200px; padding:20px;">
+	    TEXT TEXT TEXT
+	    <span style="background-color:#C0C0C0; position:relative;">
+	            这段文字从左向右排列，红 XX 和 蓝 XX 和黄 XX 都是绝对定位元素，它的包含块是相对定位的SPAN。 可以通过它们绝对定位的位置来判断它们包含块的边缘。
+	            <em style="position:absolute; color:red; top:0; left:0;">XX</em>
+	            <em style="position:absolute; color:yellow; top:20px; left:0;">XX</em>
+	            <em style="position:absolute; color:blue; bottom:0; right:0;">XX</em>
+	            <em style="position:absolute; color:yellow; bottom:0; left:0;">XX</em>
+	            <em style="position:absolute; color:blue; top:0; right:0;">XX</em>
+	    </span>
+	</p>
+</body>
+</html>
